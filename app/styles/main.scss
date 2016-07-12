@@ -1,0 +1,167 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+// ------ CUSTOM CODE ------ //
+//SCSS added by becky kohl
+
+
+//---------------colors ---------------//
+//Gray and brand colors for use across Bootstrap.
+$gray-base: #000;
+$gray-darker: lighten($gray-base, 13.5%); // #222
+$gray-dark: lighten($gray-base, 20%); // #333
+$gray: lighten($gray-base, 33.5%); // #555
+$gray-light: lighten($gray-base, 46.7%); // #777
+$gray-lighter: lighten($gray-base, 93.5%); // #eee
+$brand-primary: darken(#428bca, 6.5%); // #337ab7
+
+
+
+//---------------general ---------------//
+body {
+  background-image: url(../images/subtle_dots.png);
+  background-position: top left;
+  background-repeat: repeat;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+.temp-filler {
+  padding-bottom: 40%;
+}
+.spacer {
+  padding-top: 5%;
+}
+.line-break {
+  border-bottom: solid thin $gray-lighter;
+}
+body {
+  padding-top: 65px;
+}
+
+.section-heading{
+  color: #12305F;
+
+}
+
+
+//---------------home---------------//
+#home-section {
+  padding-top: 35%;
+}
+
+//---------------navbar---------------//
+$bgDefault      : #1a4589;
+$bgHighlight    : #446bab;
+$colDefault     : #ffffff;
+$colHighlight   : #ffffff;
+$dropDown       : false;
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgDefault;}}}}}
+    @if $dropDown {
+      .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+.navbar {
+    box-shadow: 0px 0px 15px $gray;
+}
+
+
+
+//---------------about---------------//
+
+
+
+
+
+
+
+
+
+
+
+//---------------media queries---------------//
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .navbar-nav.nav-justified > li {
+    float: none;
+  }
+  .navbar-nav {
+    padding-top: 5%;
+  }
+  .spacer {
+    padding-top: 5%;
+  }
+  #home-section {
+    padding-top: 20%;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {}
